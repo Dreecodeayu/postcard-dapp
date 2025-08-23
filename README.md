@@ -106,13 +106,16 @@ VITE_CONTRACT_ADDRESS=0xYOUR_CONTRACT_ADDRESS
 ---
 
 ## 📸 Screenshots
-[postcard-frontend/public/screenshot/canvas1.png]
-[postcard-frontend/public/screenshot/canvas2.png]
+### Connect Wallet
+![Connect Wallet](postcard-frontend/public/screenshot/canvas1.png)
+
+### Mint Postcard
+![Mint Postcard](postcard-frontend/public/screenshot/canvas2.png)
 
 ---
 
 ## 🗺️ Roadmap
 - “My Postcards” list (owned NFTs)  
 - Likes & Collects  
-- Host frontend on Vercel/Netlify  
+- Host frontend on Vercel  
 - Contract verification on BaseScan  
