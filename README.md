@@ -33,34 +33,87 @@ They can also read postcards by **Token ID**.
 
 ### 0) Requirements
 - Node.js v18+  
-- MetaMask browser extension (switch to **Base Sepolia**)
+- MetaMask browser extension (switch to **Base Sepolia**)  
 
 ### 1) Clone and install
 ```bash
 git clone https://github.com/Dreecodeayu/postcard-dapp.git
 cd postcard-dapp
 npm install
+```
 
-2) Contracts (optional deploy)
+### 2) Contracts (optional deploy)
 
-    The contract is already deployed on Base Sepolia.
+The contract is already deployed on Base Sepolia (address above).  
+If you want to redeploy:
 
-    If you want to redeploy:
+Copy `.env.example` to `.env` and fill in:
+```ini
+RPC_URL=https://sepolia.base.org
+PRIVATE_KEY=0xYOUR_TEST_WALLET_PRIVATE_KEY
+```
 
-    1.  Copy .env.example to .env and fill in:
+Then run:
+```bash
+npx hardhat compile
+npx tsx scripts/deploy.ts
+```
 
-    2.  Compile and deploy:
-            npx hardhat compile
-            npx tsx scripts/deploy.ts
+### 3) Frontend
+```bash
+cd postcard-frontend
+npm install
+```
 
-    3.  Frontend
-            cd postcard-frontend
-            npm install
+Create `.env` file by copying `.env.example`:
+```ini
+VITE_RPC_URL=https://sepolia.base.org
+VITE_CONTRACT_ADDRESS=0x8546afE98172Da80097F581D5B6F3cfdD14938Eb
+```
 
-            Create .env file by copying .env.example:
-            VITE_RPC_URL=https://sepolia.base.org
-            VITE_CONTRACT_ADDRESS=0x8546afE98172Da80097F581D5B6F3cfdD14938Eb
-    
-    4.  npm run dev
-    
-    5.  Then open → http://localhost:5173
+Run:
+```bash
+npm run dev
+```
+
+Then open → [http://localhost:5173](http://localhost:5173)
+
+**Use the app:**
+- Click **Connect Wallet** (MetaMask).  
+- Type a message → **Mint Postcard**.  
+- Read any postcard by entering **Token ID** (first mint is `0`).  
+
+---
+
+## 🔒 Environment Files
+
+`.env` is ignored by git (`.gitignore`).  
+Use these examples to configure locally:
+
+**`/.env.example`** (root, for Hardhat scripts):
+```ini
+RPC_URL=https://sepolia.base.org
+PRIVATE_KEY=0xYOUR_TEST_WALLET_PRIVATE_KEY
+```
+
+**`/postcard-frontend/.env.example`** (frontend):
+```ini
+VITE_RPC_URL=https://sepolia.base.org
+VITE_CONTRACT_ADDRESS=0xYOUR_CONTRACT_ADDRESS
+```
+
+---
+
+## 📸 Screenshots
+_Add screenshots here:_
+- Connect Wallet  
+- Mint Postcard  
+- Read Postcard  
+
+---
+
+## 🗺️ Roadmap
+- “My Postcards” list (owned NFTs)  
+- Likes & Collects  
+- Host frontend on Vercel/Netlify  
+- Contract verification on BaseScan  
