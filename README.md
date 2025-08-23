@@ -7,8 +7,8 @@ They can also read postcards by **Token ID**.
 ---
 
 ## 🚀 Live Demo (optional)
-> If deployed (e.g. Vercel/Netlify), paste link here.  
-> Otherwise, run locally with instructions below.
+👉 [Try it here](https://postcard-dapp.vercel.app/)
+
 
 ---
 
@@ -66,10 +66,11 @@ npm install
 ```
 
 Create `.env` file by copying `.env.example`:
+
 ```ini
 VITE_RPC_URL=https://sepolia.base.org
-VITE_CONTRACT_ADDRESS=0x8546afE98172Da80097F581D5B6F3cfdD14938Eb
-```
+VITE_CONTRACT_ADDRESS=0xYOUR_CONTRACT_ADDRESS
+
 
 Run:
 ```bash
@@ -105,10 +106,8 @@ VITE_CONTRACT_ADDRESS=0xYOUR_CONTRACT_ADDRESS
 ---
 
 ## 📸 Screenshots
-_Add screenshots here:_
-- Connect Wallet  
-- Mint Postcard  
-- Read Postcard  
+(postcard-frontend/public/screenshot/canvas1.png)
+(postcard-frontend/public/screenshot/canvas2.png)
 
 ---
 
