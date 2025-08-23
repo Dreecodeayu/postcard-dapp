@@ -73,7 +73,7 @@ VITE_CONTRACT_ADDRESS=0xYOUR_CONTRACT_ADDRESS
 
 
 Run:
-```bash
+```
 npm run dev
 ```
 
@@ -106,8 +106,8 @@ VITE_CONTRACT_ADDRESS=0xYOUR_CONTRACT_ADDRESS
 ---
 
 ## 📸 Screenshots
-(postcard-frontend/public/screenshot/canvas1.png)
-(postcard-frontend/public/screenshot/canvas2.png)
+[postcard-frontend/public/screenshot/canvas1.png]
+[postcard-frontend/public/screenshot/canvas2.png]
 
 ---
 
